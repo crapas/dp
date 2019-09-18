@@ -10,7 +10,7 @@ def knapSack(C, weight, value, n):
   for i in range(0, n + 1):
     maxValue[i][0] = 0
   
-  # 물건이 하나도 없을 때 도둑은 훔칠게 없습니다.
+  # 물건이 하나도 없을 때 도둑은 훔칠 게 없습니다.
   for j in range(0, C + 1):
     maxValue[0][j] = 0
 
@@ -25,7 +25,7 @@ def knapSack(C, weight, value, n):
       else:
         maxValue[i][j] = maxValue[i - 1][j]
 
-  # 도둑의 이익표를 출력해 봅시다.
+  # 도둑의 이익표를 출력해봅시다.
   for i in range(0, n + 1):
     for j in range(0, C + 1):
       print('%3d' % maxValue[i][j], end='')
@@ -35,5 +35,5 @@ def knapSack(C, weight, value, n):
 
 weight = [2, 3, 4, 5]
 value = [3, 4, 5, 6]
-print('도둑이 가지고 갈 수 있는 가치의 최대값은 %d입니다.' % \
+print('도둑이 가지고 갈 수 있는 가치의 최댓값은 %d입니다.' % \
       knapSack(5, weight, value, 4))

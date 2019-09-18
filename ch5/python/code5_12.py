@@ -23,7 +23,7 @@ def lcs_length(X, Y, m, n):
       else:
         LCSTable[i][j] = getMax(LCSTable[i - 1][j], LCSTable[i][j - 1])
 
-  # LCSTable을 출력해 봅니다.
+  # LCSTable을 출력해봅니다.
   for i in range(0, m + 1):
     for j in range(0, n + 1):
       print('%3d' % LCSTable[i][j], end='')

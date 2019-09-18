@@ -17,7 +17,7 @@ int knapSack(int C, int* weight, int* value, int n)
     return 0;
 
   // n번째 물건의 무게가 C보다 크면 그 물건은 넣을 수 없습니다.
-  // 하지만 남은 물건 중에 C보다 작은 다른 물건이 있을 지도 모릅니다.
+  // 하지만 남은 물건 중에 C보다 작은 다른 물건이 있을지도 모릅니다.
   if(weight[n - 1] > C)
     return knapSack(C, weight, value, n - 1);
 
@@ -34,7 +34,7 @@ int main()
 {
   int weight[] = {2, 3, 4, 5};
   int value[] = {3, 4, 5, 6};
-  printf("도둑이 가지고 갈 수 있는 가치의 최대값은 %d입니다.\n", 
+  printf("도둑이 가지고 갈 수 있는 가치의 최댓값은 %d입니다.\n", 
          knapSack(5, weight, value, 4));
   return 0;
 }

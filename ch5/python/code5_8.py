@@ -1,4 +1,4 @@
-# n은 집합의 원소의 수 입니다.
+# n은 집합의 원소의 수입니다.
 def isSubsetSum(arr, n, X):
   subsum = [[False] * (X + 1) for i in range(0, n)]
 
@@ -24,7 +24,7 @@ def isSubsetSum(arr, n, X):
       else:
         subsum[i][j] = subsum[i - 1][j - v]
   
-  # 완성된 행렬을 출력해 봅니다.
+  # 완성된 행렬을 출력해봅니다.
   for i in range(0, n):
     for j in range(0, X + 1):
       print('%s' % ('T ' if subsum[i][j] else 'F '), end = '')

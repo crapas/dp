@@ -26,7 +26,7 @@ int main()
   char str[] = "BBABCBCAB";
   int start = 0;
   int end = strlen(str) - 1;
-  printf("%s의 최대 회문 부분 시퀀스의 길이는 %d입니다.\n", 
+  printf("%s의 최대 회문 부분 수열의 길이는 %d입니다.\n", 
          str, LPS_length(str, start, end));
   return 0;
 }

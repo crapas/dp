@@ -1,13 +1,15 @@
 #include <stdio.h>
 #include <stdbool.h>
 
-// n은 집합의 원소의 수 입니다.
+// n은 집합의 원소의 수입니다.
 bool isSubsetSum(int* arr, int n, int X)
 {
   int subsum[n][X + 1];
 
-  for(int i = 0; i < n; i++){
-    for(int j = 0; j <= X; j++){
+  for(int i = 0; i < n; i++)
+  {
+    for(int j = 0; j <= X; j++)
+    {
       subsum[i][j] = false;
     }
   }
@@ -24,9 +26,11 @@ bool isSubsetSum(int* arr, int n, int X)
       subsum[0][j] = false;
   
   // 나머지 셀을 채웁니다.
-  for(int i = 1; i < n; i++){
+  for(int i = 1; i < n; i++)
+{
     int v = arr[i];
-    for(int j = 1; j <= X; j++){
+    for(int j = 1; j <= X; j++)
+{
       if(j < v)
         subsum[i][j] = subsum[i - 1][j];
       else if(subsum[i - 1][j])
@@ -36,9 +40,11 @@ bool isSubsetSum(int* arr, int n, int X)
     }
   }
 
-  // 완성된 행렬을 출력해 봅니다.
-  for(int i = 0; i < n; i++){
-    for(int j = 0; j <= X; j++){
+  // 완성된 행렬을 출력해봅니다.
+  for(int i = 0; i < n; i++)
+  {
+    for(int j = 0; j <= X; j++)
+    {
       printf("%c ", subsum[i][j]? 'T': 'F');
     }
     printf("\n");
@@ -50,7 +56,7 @@ bool isSubsetSum(int* arr, int n, int X)
 int main()
 {
   int arr[7] = {0, 6, 11, 8, 17, 3, 9};
-  printf("결과는 %s 입니다.\n", isSubsetSum(arr, 7, 13)? "참": "거짓");
-  printf("결과는 %s 입니다.\n", isSubsetSum(arr, 7, 14)? "참": "거짓");
+  printf("결과는 %s입니다.\n", isSubsetSum(arr, 7, 13)? "참": "거짓");
+  printf("결과는 %s입니다.\n", isSubsetSum(arr, 7, 14)? "참": "거짓");
   return 0;
 }

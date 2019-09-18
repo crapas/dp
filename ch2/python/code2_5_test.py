@@ -15,7 +15,7 @@ for i in range(0, num_of_station):
     else:
       cost[i][j] = randint(1, 10)
 
-# 생성한 요금표를 출력해 봅니다.
+# 생성한 요금표를 출력해봅니다.
 for i in range(0, num_of_station):
   print(cost[i])
 
@@ -45,6 +45,6 @@ def minCost(s, d):
 s = 0
 d = num_of_station - 1
 start_time = int(round(time.time() * 1000))
-print('%d번 역에서 %d번 역 까지의 최소 비용은 %d입니다.' % (s, d, minCost(s, d)))
+print('%d번 역에서 %d번 역까지의 최소 비용은 %d입니다.' % (s, d, minCost(s, d)))
 end_time = int(round(time.time() * 1000))
 print('minCost 함수의 실행 시간 : %d(ms)' % (end_time - start_time))

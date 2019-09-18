@@ -8,7 +8,7 @@ int getMin(int a, int b)
   return a < b? a: b;
 }
 
-/* 행렬의 왼쪽 위가 (0, 0), 오른쪽 아래가 (m, n)셀로 0부터 시작하므로
+/* 행렬의 왼쪽 위가 (0, 0), 오른쪽 아래가 (m, n) 셀로 0부터 시작하므로
  * 이 MxN 크기의 행렬이 주어졌을 때 m = M - 1, n = N - 1이 됩니다.
  * cost 행렬을 배열로 선언하거나 함수를 호출할 때 주의합시다. */
 int minPathCost(int cost[M][N], int m, int n)

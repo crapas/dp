@@ -41,7 +41,7 @@ int main()
 {
   int s = 0;
   int d = 3;
-  printf("%d번 역에서 %d번 역 까지의 최소 비용은 %d입니다.\n", 
+  printf("%d번 역에서 %d번 역까지의 최소 비용은 %d입니다.\n", 
         s, d, minCost(s, d));
   return 0;
 }

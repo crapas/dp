@@ -24,7 +24,7 @@ int eggDropTrial(int n, int x)
     trialCount[i][1] = 1;
   }
 
-  // 달걀이 1개일 때는 항상 층 수 만큼 던져야 합니다.
+  // 달걀이 1개일 때는 항상 층 수만큼 던져야 합니다.
   for(int j = 1; j <= n; j++)
     trialCount[1][j] = j;
 
@@ -37,12 +37,12 @@ int eggDropTrial(int n, int x)
       // j층까지 모든 층 k에 대해서
       for(int k = 1; k <= j; k++)
       {
-        // (달걀이 깨진 경우) i - 1개의 달걀로 k - 1층 까지의 시행 횟수와
-        // (달걀이 깨지지 않은 경우) i개의 달걀로 j - k층 까지의 시행 횟수
+        // (달걀이 깨진 경우) i - 1개의 달걀로 k - 1층까지의 시행 횟수와
+        // (달걀이 깨지지 않은 경우) i개의 달걀로 j - k층까지의 시행 횟수
         // 두 값 중 더 큰 값이 최악의 경우입니다.
         int thisTrial = 1 + getMax(trialCount[i - 1][k - 1], 
                                    trialCount[i][j - k]);
-        // 최악의 경우의 최소값을 구해야 합니다.
+        // 최악의 경우의 최솟값을 구해야 합니다.
         if(thisTrial < trialCount[i][j])
           trialCount[i][j] = thisTrial;
       }
@@ -50,9 +50,11 @@ int eggDropTrial(int n, int x)
     }
   }
   
-  // 완성된 trialCount를 출력해 봅니다.
-  for(int i = 1; i <= x; i++){
-    for(int j = 0; j <= n; j++){
+  // 완성된 trialCount를 출력해봅니다.
+  for(int i = 1; i <= x; i++)
+  {
+    for(int j = 0; j <= n; j++)
+    {
       printf("%3d", trialCount[i][j]);
     }
     printf("\n");

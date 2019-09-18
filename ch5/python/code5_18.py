@@ -19,5 +19,5 @@ def knapSack(C, weight, value, n):
 
 weight = [2, 3, 4, 5]
 value = [3, 4, 5, 6]
-print('도둑이 가지고 갈 수 있는 가치의 최대값은 %d입니다.' % \
+print('도둑이 가지고 갈 수 있는 가치의 최댓값은 %d입니다.' % \
       knapSack(5, weight, value, 4))

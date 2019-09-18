@@ -20,7 +20,7 @@ int knapSack(int C, int* weight, int* value, int n)
   for(int i = 0; i <= n; i++)
     maxValue[i][0] = 0;
   
-  // 물건이 하나도 없을 때 도둑은 훔칠게 없습니다.
+  // 물건이 하나도 없을 때 도둑은 훔칠 게 없습니다.
   for(int j = 0; j <= C; j++)
     maxValue[0][j] = 0;
 
@@ -29,7 +29,8 @@ int knapSack(int C, int* weight, int* value, int n)
   {
     for(int j = 1; j <= C; j++)
     {
-      if(weight[i - 1] <= j){
+      if(weight[i - 1] <= j)
+{
         int x = j - weight[i - 1];
         maxValue[i][j] = getMax(value[i - 1] + maxValue[i - 1][x], 
                                 maxValue[i - 1][j]);
@@ -40,9 +41,11 @@ int knapSack(int C, int* weight, int* value, int n)
     }
   }
 
-  // 도둑의 이익표를 출력해 봅시다.
-  for(int i = 0; i <= n; i++){
-    for(int j = 0; j <= C; j++){
+  // 도둑의 이익표를 출력해봅시다.
+  for(int i = 0; i <= n; i++)
+  {
+    for(int j = 0; j <= C; j++)
+    {
       printf("%3d", maxValue[i][j]);
     }
     printf("\n");
@@ -54,7 +57,7 @@ int main()
 {
   int weight[] = {2, 3, 4, 5};
   int value[] = {3, 4, 5, 6};
-  printf("도둑이 가지고 갈 수 있는 가치의 최대값은 %d입니다.\n", 
+  printf("도둑이 가지고 갈 수 있는 가치의 최댓값은 %d입니다.\n", 
          knapSack(5, weight, value, 4));
   return 0;
 }

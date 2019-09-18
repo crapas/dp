@@ -12,9 +12,9 @@ def eggDropTrial(n, x):
   for p in range(1, n + 1):
     broken = eggDropTrial(p - 1, x - 1) # 깨진 경우 - 아래층으로
     notBroken = eggDropTrial(n - p, x)  # 깨지지 않은 경우 - 위층으로
-    # 최악의 경우이므로 두 경우중 큰 값이 필요합니다.
+    # 최악의 경우이므로 두 경우 중 큰 값이 필요합니다.
     thisTrial = broken if broken > notBroken else notBroken
-    # 최악의 경우의 최소값이므로 최소값을 구합니다.
+    # 최악의 경우의 최솟값이므로 최솟값을 구합니다.
     minTrial = thisTrial if minTrial > thisTrial else minTrial
 
   # 1번 던진 후의 결과이므로 1을 더해서 반환합니다.

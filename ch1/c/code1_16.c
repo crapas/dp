@@ -8,7 +8,8 @@ int total;
  * 아닌 지역 변수(x와 y)의 메모리도 활성 레코드 안에 할당됩니다.
  * count는 정적 변수이므로 로드타임에 데이터 영역에 할당됩니다.
  */
-int squareOfSum(int x, int y){
+int squareOfSum(int x, int y)
+{
   static int count = 0;	// 로드타임 변수
   printf("함수가 %d번 호출되었습니다.\n", ++count);
   // square() 함수를 호출하지 않습니다.
@@ -20,7 +21,8 @@ int squareOfSum(int x, int y){
  * 호출되면 스택의 최상단에 활성 레코드가 생성되며 정적 변수가 
  * 아닌 지역 변수(a와 b)는 이 활성 레코드 내에 할당됩니다.
  */
-int main(){
+int main()
+{
   int a = 4, b = 2;
   total = squareOfSum(a, b);
   printf("합의 제곱 = %d\n", total);

@@ -8,12 +8,12 @@ int getMin(int a, int b)
   return a < b? a: b;
 }
 
-// 셀 (0, 0)에서 셀(m, n)까지의 최소 이동 비용을 계산합니다.
+// 셀 (0, 0)에서 셀 (m, n)까지의 최소 이동 비용을 계산합니다.
 int minPathCost(int cost[M][N], int m, int n)
 {
   if(m == 0 && n == 0)  // 셀 (0, 0)이 목적지인 경우
     return cost[0][0];
-  if(m == 0)            // 목적지가 제일 윗 행에 있을 때
+  if(m == 0)            // 목적지가 제일 위 행에 있을 때
     return minPathCost(cost, 0, n - 1) + cost[0][n];
   if(n == 0)            // 목적지가 제일 왼쪽 열에 있을 때
     return minPathCost(cost, m - 1, 0) + cost[m][0];

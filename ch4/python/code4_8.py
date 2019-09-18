@@ -16,4 +16,4 @@ def maxSubArraySum(arr, n):
 
 arr = [-2, -3, 4, -1, -2, 1, 5, -3]
 n = len(arr)
-print('부분 배열의 합의 최대값은 %d입니다.' % maxSubArraySum(arr, n))
+print('부분 배열의 합의 최댓값은 %d입니다.' % maxSubArraySum(arr, n))

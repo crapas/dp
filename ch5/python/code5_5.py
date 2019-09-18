@@ -1,7 +1,7 @@
 def isInterleaving(A, B, C):
   # 하위 문제의 계산 반복 여부를 확인하기 위해
-  # 검사하는 문자열을 출력해 봅니다.
-  print('간삽 확인 : [%s] + [%s] => [%s]' % (A, B, C))
+  # 검사하는 문자열을 출력해봅니다.
+  print('인터리빙 확인 : [%s] + [%s] => [%s]' % (A, B, C))
 
   # 만약 모든 문자열이 빈 문자열인 경우
   if (len(A) == 0) and (len(B) == 0) and (len(C) == 0):
@@ -28,7 +28,7 @@ a = 'bcc'
 b = 'bbca'
 c = 'bbcbcac'
 check = isInterleaving(a, b, c)
-print('%s는 %s와 %s의 간삽' % (c, a, b), end = '')
+print('%s는 %s와 %s의 인터리빙' % (c, a, b), end = '')
 if check:
   print('입니다.')
 else:

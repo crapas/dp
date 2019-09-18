@@ -2,7 +2,8 @@
 #include <string.h>
 #include <stdbool.h>
 
-int isInterleaving(char* A, char* B, char* C){
+int isInterleaving(char* A, char* B, char* C)
+{
   // A, B, C 세 문자열의 길이를 구합니다.
   int M = strlen(A);
   int N = strlen(B);
@@ -12,7 +13,7 @@ int isInterleaving(char* A, char* B, char* C){
   if(lengthC != M + N)
     return false;
 
-  // 간삽 여부를 저장하는 2차원 배열
+  // 인터리빙 여부를 저장하는 2차원 배열
   bool ilMatrix[M + 1][N + 1];
 
   ilMatrix[0][0] = true;  // (0, 0)은 T
@@ -36,8 +37,10 @@ int isInterleaving(char* A, char* B, char* C){
   }
 
   // 나머지 셀을 채웁니다.
-  for(int i = 1; i <= M; i++){
-    for(int j = 1; j <= N; j++){
+  for(int i = 1; i <= M; i++)
+  {
+    for(int j = 1; j <= N; j++)
+    {
       // 현재 셀의 A, B, C의 글자
       char currentA = A[i - 1];
       char currentB = B[j - 1];
@@ -58,8 +61,10 @@ int isInterleaving(char* A, char* B, char* C){
   }
 
   // 완성된 행렬을 출력합니다.
-  for(int i = 0; i <= M; i++){
-    for(int j = 0; j <= N; j++){
+  for(int i = 0; i <= M; i++)
+  {
+    for(int j = 0; j <= N; j++)
+    {
       printf("%c ", ilMatrix[i][j]? 'T': 'F');
     }
     printf("\n");
@@ -74,7 +79,7 @@ int main()
   char c[10] = "bbcbcac";
 
   int check = isInterleaving(a, b, c);
-  printf("%s는 %s와 %s의 간삽", c, a, b);
+  printf("%s는 %s와 %s의 인터리빙", c, a, b);
   if(check == true)
     printf("입니다.\n");
   else

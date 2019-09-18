@@ -13,7 +13,7 @@ def maxSubStringLength(str):
       length = j - i + 1
 
       # 만약 지금까지의 maxLen이 검사하려는 문자열보다 길면
-      # 현재 문자열을 검사(앞쪽과 뒤쪽 절반의 숫자의 합이 같은지) 하지 않습니다.
+      # 현재 문자열을 검사(앞쪽과 뒤쪽 절반의 숫자의 합이 같은지)하지 않습니다.
       if maxLen >= length:
         continue      
       lSum = 0

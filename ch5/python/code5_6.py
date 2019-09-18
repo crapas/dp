@@ -8,7 +8,7 @@ def isInterleaving(A, B, C):
   if lengthC != M + N:
     return False
 
-  # 간삽 여부를 저장하는 2차원 배열
+  # 인터리빙 여부를 저장하는 2차원 배열
   ilMatrix = [[True] * (N + 1) for i in range(0, M + 1)]
 
   # 첫번째 열을 채웁니다.
@@ -55,7 +55,7 @@ a = 'bcc'
 b = 'bbca'
 c = 'bbcbcac'
 check = isInterleaving(a, b, c)
-print('%s는 %s와 %s의 간삽' % (c, a, b), end = '')
+print('%s는 %s와 %s의 인터리빙' % (c, a, b), end = '')
 if check:
   print('입니다.')
 else:

@@ -16,5 +16,5 @@ def LPS_length(string, start, end):
 string = 'BBABCBCAB'
 start = 0
 end = len(string) - 1
-print('%s의 최대 회문 부분 시퀀스의 길이는 %d입니다.' % \
+print('%s의 최대 회문 부분 수열의 길이는 %d입니다.' % \
   (string, LPS_length(string, start, end)))

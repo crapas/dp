@@ -1,5 +1,5 @@
 # 주의 : 재귀 호출 버전(code5_3.c)의 numOfPaths() 함수와
-# 파라미터의 계열이 다릅니다. 
+# 매개변수가 다릅니다. 
 # - 재귀 호출 버전의 numPaths(3, 2)는 4x3개의 방의 경로 계산
 # - 이 버전의 numPaths(3, 2)는 3x2개의 방의 경로 계산
 def numOfPaths(m, n):
@@ -20,4 +20,4 @@ def numOfPaths(m, n):
 M, N = input('방의 구조를 입력하세요 : ').split()
 M = int(M)
 N = int(N)
-print('총 경로의 수는 %d개 입니다.' % numOfPaths(M, N))
+print('총 경로의 수는 %d개입니다.' % numOfPaths(M, N))

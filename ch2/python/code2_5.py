@@ -30,4 +30,4 @@ def minCost(s, d):
 
 s = 0
 d = 3
-print('%d번 역에서 %d번 역 까지의 최소 비용은 %d입니다.' % (s, d, minCost(s, d)))
+print('%d번 역에서 %d번 역까지의 최소 비용은 %d입니다.' % (s, d, minCost(s, d)))
