@@ -17,14 +17,14 @@ int eggDropTrial(int n, int x)
   // 코드의 가독성을 위해 아래와 같이 정의합니다.
   int trialCount[x + 1][n + 1];
 
-    // 0층은 0번, 1층은 1번 던져보면 됩니다.
+  // 0층은 0번, 1층은 1번 던져보면 됩니다.
   for(int i = 1; i <= x; i++)
   {
     trialCount[i][0] = 0;
     trialCount[i][1] = 1;
   }
 
-  // 달걀이 1개일 때는 항상 층 수만큼 던져야 합니다.
+  // 달걀이 1개일 때는 항상 층수만큼 던져야 합니다.
   for(int j = 1; j <= n; j++)
     trialCount[1][j] = j;
 

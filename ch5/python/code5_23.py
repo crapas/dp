@@ -17,7 +17,7 @@ def eggDropTrial(n, x):
     trialCount[i][0] = 0
     trialCount[i][1] = 1
 
-  # 달걀이 1개일 때는 항상 층 수만큼 던져야 합니다.
+  # 달걀이 1개일 때는 항상 층수만큼 던져야 합니다.
   for j in range(1, n + 1):
     trialCount[1][j] = j
   
