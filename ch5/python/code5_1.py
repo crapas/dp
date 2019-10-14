@@ -27,10 +27,10 @@ def editDistance(str1, str2):
   # 양쪽 단어 사이의 최소 교정 비용을 구합니다.
   i = editDistance(str1, str2[1:])
 
-  # 세 연산 이후 최소 교정 비용 간의 최소값에 1을 더해서 반환합니다.
-  # getMinumum() 함수는 세 정수의 최소값을 구하는 도우미 함수입니다.
+  # 세 연산 이후 최소 교정 비용 간의 최솟값에 1을 더해서 반환합니다.
+  # getMinumum() 함수는 세 정수의 최솟값을 구하는 도우미 함수입니다.
   return getMinimum(d, u, i) + 1
 
 str1, str2 = input('두 단어를 입력하세요 : ').split()
-print('두 단어 [%s] [%s] 사이의 최소 교정 비용은 %d 입니다.' % \
+print('두 단어 [%s] [%s] 사이의 최소 교정 비용은 %d입니다.' % \
   (str1, str2, editDistance(str1, str2)))

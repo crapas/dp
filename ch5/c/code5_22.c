@@ -5,7 +5,7 @@
 int eggDropTrial(int n, int x)
 {
   // 0층은 0번, 1층은 1번 던져보면 되며, 
-  // 만약 달걀이 1개인 경우 1층 부터 꼭대기까지 n번 던져봐야 합니다.
+  // 만약 달걀이 1개인 경우 1층부터 꼭대기까지 n번 던져봐야 합니다.
   if(n == 1 || n == 0 || x == 1)
     return n;
   
@@ -15,9 +15,9 @@ int eggDropTrial(int n, int x)
   {
     int broken = eggDropTrial(p - 1, x - 1);  // 깨진 경우 - 아래층으로
     int notBroken = eggDropTrial(n - p, x);   // 깨지지 않은 경우 - 위층으로
-    // 최악의 경우이므로 두 경우중 큰 값이 필요합니다.
+    // 최악의 경우이므로 두 경우 중 큰 값이 필요합니다.
     int thisTrial = broken > notBroken? broken: notBroken;
-    // 최악의 경우의 최소값 이므로 최소값을 구합니다.
+    // 최악의 경우의 최솟값 이므로 최솟값을 구합니다.
     minTrial = minTrial > thisTrial? thisTrial: minTrial;
   }  
   // 1번 던진 후의 결과이므로 1을 더해서 반환합니다.

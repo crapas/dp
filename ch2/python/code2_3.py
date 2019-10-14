@@ -10,7 +10,7 @@ def minCost(s, d):
   if (s == d) or (s == d - 1):
     return cost[s][d]
   minValue = cost[s][d]
-  # 최소값을 찾기 위해서 모든 중간 역에 대해서 계산해 봅니다.
+  # 최솟값을 찾기 위해서 모든 중간 역에 대해서 계산해봅니다.
   for i in range(s + 1, d):
     # s번 역에서 i번 역까지의 최소 요금과
     # i번 역에서 d번 역까지의 최소 요금의 합
@@ -22,4 +22,4 @@ def minCost(s, d):
 
 s = 0
 d = 3
-print('%d번 역에서 %d번 역 까지의 최소 비용은 %d입니다.' % (s, d, minCost(s, d)))
+print('%d번 역에서 %d번 역까지의 최소 비용은 %d입니다.' % (s, d, minCost(s, d)))

@@ -10,4 +10,4 @@ def numOfPaths(m, n):
 M, N = input('방의 구조를 입력하세요 : ').split()
 M = int(M)
 N = int(N)
-print('총 경로의 수는 %d개 입니다.' % numOfPaths(M - 1, N - 1))
+print('총 경로의 수는 %d개입니다.' % numOfPaths(M - 1, N - 1))

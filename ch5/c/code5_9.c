@@ -9,8 +9,8 @@ int getMax(int a, int b)
 
 int lcs_length(char* X, char* Y, int m, int n)
 {
-  // 종료 조건은 두 문자열 중 하나가 빈 문자열일 때 이며,
-  // 이때의 LCS_LENGTH는 0 입니다.
+  // 종료 조건은 두 문자열 중 하나가 빈 문자열일 때이며,
+  // 이때의 LCS_LENGTH는 0입니다.
   if(m == 0 || n == 0)
     return 0;
 
@@ -26,7 +26,7 @@ int main()
 {
   // 다음 Test Case는 매우 오래 걸리는 Test Case입니다.
   // 같은 테스트 케이스로 메모 전략 사용 버전과 다이나믹 프로그래밍 사용 버전의
-  // 실행 시간을 비교 체험해 봅시다.
+  // 실행 시간을 비교 체험해봅시다.
   //char X[30] = "AAACCGTGAGTTATTCGTTCTAGAA";
   //char Y[30] = "CACCCCTAAGGTACCTTTGGTTC";
   char X[30] = "ABCD";

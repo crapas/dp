@@ -4,7 +4,7 @@ def getMinimum(a, b, c):
 def editDistance(str1, str2, m, n):
   EditD = [[0] * (n + 1) for i in range(0, m + 1)]
 
-  for j in range(0, n + 1):   # 제일 윗 행
+  for j in range(0, n + 1):   # 제일 위 행
     EditD[0][j] = j
   
   for i in range(0, m + 1):   # 제일 왼쪽 열
@@ -21,7 +21,7 @@ def editDistance(str1, str2, m, n):
                                  EditD[i - 1][j], \
                                  EditD[i - 1][j - 1]) + 1
 
-  # 완성된 EditD 행렬을 출력해 봅니다.
+  # 완성된 EditD 행렬을 출력해봅니다.
   for i in range(0, m + 1):
     for j in range(0, n + 1):
       print('%2d' % EditD[i][j], end = '')
@@ -30,5 +30,5 @@ def editDistance(str1, str2, m, n):
   return EditD[m][n]
 
 str1, str2 = input('두 단어를 입력하세요 : ').split()
-print('두 단어 [%s] [%s] 사이의 최소 교정 비용은 %d 입니다.' % \
+print('두 단어 [%s] [%s] 사이의 최소 교정 비용은 %d입니다.' % \
   (str1, str2, editDistance(str1, str2, len(str1), len(str2))))

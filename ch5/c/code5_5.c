@@ -2,10 +2,11 @@
 #include <string.h>
 #include <stdbool.h>
 
-bool isInterleaving(char* A, char* B, char* C){
+bool isInterleaving(char* A, char* B, char* C)
+{
   // 하위 문제의 계산 반복을 확인하기 위해 검사하는
-  // 문자열을 출력해 봅니다.
-  printf("간삽 확인 : [%s] + [%s] => [%s]\n", A, B, C);
+  // 문자열을 출력해봅니다.
+  printf("인터리빙 확인 : [%s] + [%s] => [%s]\n", A, B, C);
 
   // 만약 모든 문자열이 빈 문자열인 경우
   if(!(*A) && !(*B) && !(*C))
@@ -26,7 +27,7 @@ bool isInterleaving(char* A, char* B, char* C){
   if(*B == *C)
     caseB = isInterleaving(A, B + 1, C + 1);
 
-  // 두 경우 중 하나라도 참이면 간삽
+  // 두 경우 중 하나라도 참이면 인터리빙
   return (caseA || caseB);
 }
 
@@ -37,7 +38,7 @@ int main()
   char c[10] = "bbcbcac";
 
   int check = isInterleaving(a, b, c);
-  printf("%s는 %s와 %s의 간삽", c, a, b);
+  printf("%s는 %s와 %s의 인터리빙", c, a, b);
   if(check == true)
     printf("입니다.\n");
   else

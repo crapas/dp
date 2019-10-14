@@ -21,15 +21,16 @@ int maxValue(int *value, int N)
     // 길이 i인 철근은 i 길이에 해당되는 가격표(valule[i - 1])까지만 필요합니다.
     for(int j = 1; j <= i; j++)
     {
-      // i - j 길이의 최대 이익에 j길의 철근의 가격을 더하면 i 길이 철근의 
-      // 판매가격을 구할 수 있으며, 모든 j에 대해서 최대값을 취하면
+      // i - j 길이의 최대 이익에 j 길이 철근의 가격을 더하면 i 길이 철근의 
+      // 판매 가격을 구할 수 있으며, 모든 j에 대해서 최댓값을 취하면
       // 길이 i인 철근을 판매할 때의 최대 이익을 구할 수 있습니다.
       maxValues[i] = getMax(maxValues[i], 
                             value[j] + maxValues[i - j]);
     }
   }
 
-  for(int i = 0; i <= N; i++){
+  for(int i = 0; i <= N; i++)
+  {
     printf("%3d", maxValues[i]);
   }
   printf("\n");

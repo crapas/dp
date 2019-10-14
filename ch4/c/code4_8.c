@@ -25,6 +25,6 @@ int main()
 {
   int arr[] = {-2, -3, 4, -1, -2, 1, 5, -3};
   int n = sizeof(arr) / sizeof(int);
-  printf("부분 배열의 합의 최대값은 %d입니다.\n", maxSubArraySum(arr, n));
+  printf("부분 배열의 합의 최댓값은 %d입니다.\n", maxSubArraySum(arr, n));
   return 0;
 }

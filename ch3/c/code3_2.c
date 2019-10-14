@@ -28,7 +28,7 @@ int minCost(int N)
 int main()
 {
   int d = 3;
-  printf("0번 역에서 %d번 역 까지의 최소 비용은 %d입니다.\n", 
+  printf("0번 역에서 %d번 역까지의 최소 비용은 %d입니다.\n", 
          d, minCost(d));
   return 0;
 }

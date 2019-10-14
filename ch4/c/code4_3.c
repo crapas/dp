@@ -7,11 +7,13 @@
 // 결과를 저장(메모)할 전역 변수(캐시)
 int MEM[M][N] = {0};
 
-int getMin(int a, int b){
+int getMin(int a, int b)
+{
   return a < b? a: b;
 }
 
-int minPathCost(int cost[M][N], int m, int n){
+int minPathCost(int cost[M][N], int m, int n)
+{
   // 만약 셀 (m, n)의 최소 이동 비용이 이미 계산되어 있다면
   // 다시 계산하지 않습니다.
   if(MEM[m][n] != 0)

@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdbool.h>
 
-// n은 집합의 원소의 수 입니다.
+// n은 집합의 원소의 수입니다.
 bool isSubsetSum(int* arr, int n, int X)
 {
   // 종료 조건 1 : X가 0이면 성공 종료 조건입니다.
@@ -25,8 +25,8 @@ bool isSubsetSum(int* arr, int n, int X)
 int main()
 {
   int arr[7] = {0, 6, 11, 8, 17, 3, 9};
-  printf("결과는 %s 입니다.\n", isSubsetSum(arr, 7, 13)? "참": "거짓");
-  printf("결과는 %s 입니다.\n", isSubsetSum(arr, 7, 14)? "참": "거짓");
+  printf("결과는 %s입니다.\n", isSubsetSum(arr, 7, 13)? "참": "거짓");
+  printf("결과는 %s입니다.\n", isSubsetSum(arr, 7, 14)? "참": "거짓");
 
   return 0;
 }

@@ -1,6 +1,7 @@
 #include <stdio.h>
 
-int main(){
+int main()
+{
   int x = 0;
   x++;
   if(x < 5)
