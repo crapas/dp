@@ -1,5 +1,8 @@
 # 코딩 테스트를 위한 다이나믹 프로그래밍
 한빛미디어의 '코딩 테스트를 위한 다이나믹 프로그래밍'의 예제 코드를 제공합니다.
+http://www.yes24.com/Product/Goods/79257722?scode=032&OzSrank=2 (YES24)
+https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=209342722 (알라딘)
+
 
 디렉토리의 구조는 다음과 같습니다.
 
