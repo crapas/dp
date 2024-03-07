@@ -10,7 +10,7 @@ def count_ways_memo(n, memo = None):
     return memo[n]
 
 def count_ways_bottonup(n):
-    dp = [0] * (n + 1)
+    dp = [0] * n
     dp[0] = 1
     dp[1] = 2
     for i in range(2, n):
