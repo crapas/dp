@@ -1,39 +1,35 @@
-INT_MIN = -99999999
 
-def maxSubArraySum(arr, n):
-  # python3의 int 자료형은 상/하한이 없습니다. 
-  # C 예제처럼 INT_MIN을 사용할 수 없으므로 충분히 작은 값을 
-  # 임의로 정해 초기값으로 사용합니다.
-  maxValue = INT_MIN
-  allNegative = True
+def max_sub_array_sum(arr, n):
+    max_value = -float('inf')
+    all_negative = True
 
-  for i in range(0, n):
-    if arr[i] >= 0:
-      allNegative = False
-      break
-    elif arr[i] > maxValue:
-      maxValue = arr[i]
-  
-  if allNegative:
-    return maxValue
-  
-  maxSumSoFar = 0
-  maxSumEndingHere = 0
-
-  for i in range(0, n):
-    maxSumEndingHere += arr[i]
-
-    if maxSumEndingHere < 0:
-      maxSumEndingHere = 0
+    for i in range(0, n):
+        if arr[i] >= 0:
+            all_negative = False
+            break
+        elif arr[i] > max_value:
+            max_value = arr[i]
     
-    if maxSumSoFar < maxSumEndingHere:
-      maxSumSoFar = maxSumEndingHere
+    if all_negative:
+        return max_value
+    
+    max_sum_so_far = 0
+    max_sum_ending_here = 0
 
-    print('i = %d, arr[i] = %2d, maxSumEndingHere : %2d, maxSumSoFar : %2d' % \
-      (i, arr[i], maxSumEndingHere, maxSumSoFar))
+    for i in range(0, n):
+        max_sum_ending_here += arr[i]
 
-  return maxSumSoFar
+        if max_sum_ending_here < 0:
+            max_sum_ending_here = 0
+        
+        if max_sum_so_far < max_sum_ending_here:
+            max_sum_so_far = max_sum_ending_here
+        # 표 4-1 확인을 위한 임시 값 출력
+        print('i = %d, arr[i] = %2d, maxSumEndingHere : %2d, maxSumSoFar : %2d' % \
+          (i, arr[i], max_sum_ending_here, max_sum_so_far))
+
+    return max_sum_so_far
 
 arr = [-2, -3, 4, -1, -2, 1, 5, -3]
 n = len(arr)
-print('부분 배열의 합의 최댓값은 %d입니다.' % maxSubArraySum(arr, n))
+print('부분 배열의 합의 최댓값은 %d입니다.' % max_sub_array_sum(arr, n))
