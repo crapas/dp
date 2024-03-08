@@ -1,20 +1,20 @@
+// 예제 코드를 일부 수정합니다. 출발 지점과 도착 지점이 같은 경우는 1이기 때문입니다.
+// 오류를 사과 드립니다.
+
 #include <stdio.h>
 
 int numOfPaths(int m, int n)
 {
   int cache[m][n];
 
-  for(int i = 1; i < m; i++)  // 첫 번째 열
-    cache[i][0] = 1;
-  
-  for(int j = 1; j < n; j++)  // 첫 번째 행
-    cache[0][j] = 1;
-
-  // 나머지 셀을 채웁니다.
-  for(int i = 1; i < m; i++)
-    for(int j = 1; j < n; j++)
-      cache[i][j] = cache[i - 1][j] + cache[i][j - 1];
-
+  for(int i = 0; i < m; i++){
+    for(int j = 0; j < n; j++){
+      if(i == 0 || j == 0)
+        cache[i][j] = 1;
+      else
+        cache[i][j] = cache[i - 1][j] + cache[i][j - 1];
+    }
+  }
   return cache[m - 1][n - 1];
 }
 
