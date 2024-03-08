@@ -39,6 +39,7 @@ int maxSubArraySum(int* arr, int n)
     if(maxSumSoFar < maxSumEndingHere)
       maxSumSoFar = maxSumEndingHere;
 
+    // 표 4-1의 확인을 위한 임시 출력
     printf("i = %2d, arr[i] = %2d, maxSumEndingHere : %2d, maxSumSoFar : %2d\n",
            i, arr[i], maxSumEndingHere, maxSumSoFar);
   }

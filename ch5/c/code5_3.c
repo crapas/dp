@@ -1,16 +1,38 @@
-#include <stdio.h>
+// 예제 코드를 일부 수정합니다. 책에는 0으로 되어 있습니다만
+// 초기 위치와 도착 위치가 동일한 경우 경로의 수는 가만히 있는 1 입니다.
+// 오류를 사과드립니다.
+// 책의 예제에는 메모이제이션 예제가 아닙니다만, 메모이제이션 예제로 수정해서 보여 드립니다.
 
+#include <stdio.h>
+#include <stdlib.h>
+
+// 메모이제이션 + 하향식 코드
+int numOfPathsCalculation(int m, int n, int** memo)
+{
+  if (m == 0 || n == 0)
+    return 1;
+  if (memo[m][n] != -1)
+    return memo[m][n];
+  // 재귀 호출
+  memo[m][n] = numOfPathsCalculation(m - 1, n, memo) + numOfPathsCalculation(m, n - 1, memo);
+  return memo[m][n];
+}
+
+// 메모이제이션 배열의 초기화를 위한 래퍼 함수
 int numOfPaths(int m, int n)
 {
-  // 종료 조건
-  if(m == 0 && n == 0)  // 방 (0, 0)
-    return 0;
-  if(m == 0 || n == 0)  // 첫 번째 행 또는 첫 번째 열
-    return 1;
+  // m * n 크기의 2차원 배열을 동적으로 생성합니다.
+  int **memo = (int **)malloc(sizeof(int *) * (m + 1));
+  for(int i = 0; i <= m; i++)
+    memo[i] = (int *)malloc(sizeof(int) * (n + 1));
 
-  // 재귀 호출
-  return numOfPaths(m - 1, n) + numOfPaths(m, n - 1);
+  // 메모이제이션 배열을 초기화합니다.
+  for(int i = 0; i <= m; i++)
+    for(int j = 0; j <= n; j++)
+      memo[i][j] = -1;
+  return numOfPathsCalculation(m, n, memo);
 }
+
 
 int main()
 {
