@@ -12,8 +12,6 @@ def min_cost(cost):
         min_value.append(cost[0][i])
         for j in range(1, i):
             min_value[i] = min(min_value[i], min_value[j] + cost[j][i])
-            # if min_value[i] > min_value[j] + cost[j][i]:
-            #     min_value[i] = min_value[j] + cost[j][i]
     return min_value[N]
 
 cost = [
