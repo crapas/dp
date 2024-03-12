@@ -1,5 +1,6 @@
 # n은 집합의 원소의 수입니다.
-def is_subset_sum(arr, n, X):
+def is_subset_sum(arr, X):
+    n = len(arr)
     subsum = [[False] * (X + 1) for i in range(0, n)]
 
     # 첫번째 열은 항상 참
@@ -33,6 +34,6 @@ def is_subset_sum(arr, n, X):
     return subsum[n - 1][X]
 
 arr = [0, 6, 11, 8, 17, 3, 9]
-print('결과는 %s입니다.' % ('참' if is_subset_sum(arr, 7, 13) else '거짓'))
+print('결과는 %s입니다.' % ('참' if is_subset_sum(arr, 13) else '거짓'))
 # [6, 8] 또는 [0, 6, 8]의 합은 14입니다.
-print('결과는 %s입니다.' % ('참' if is_subset_sum(arr, 7, 14) else '거짓'))
+print('결과는 %s입니다.' % ('참' if is_subset_sum(arr, 14) else '거짓'))

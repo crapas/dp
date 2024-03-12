@@ -10,7 +10,7 @@ void swap(int *a, int *b)
 void bubbleSort(int *arr, int n)
 {
   // 종료 조건
-  if(n == 1)
+  if(n == 1 || n == 0)
     return;
   // 1회의 탐색 과정을 수행
   for(int j = 0; j < n - 1; j++)

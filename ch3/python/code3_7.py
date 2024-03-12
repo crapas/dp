@@ -1,38 +1,38 @@
 class Node:
-  def __init__(self, data):
-    self.data = data
-    self.left = None
-    self.right = None
+    def __init__(self, data):
+        self.data = data
+        self.left = None
+        self.right = None
 
-def addChildSum(node):
-  if node is None:
-    return
-  
-  addChildSum(node.left)
-  addChildSum(node.right)
+def add_child_sum(node):
+    if node is None:
+        return
+    
+    add_child_sum(node.left)
+    add_child_sum(node.right)
 
-  finalSum = node.data
+    final_sum = node.data
 
-  if node.left is not None:
-    finalSum += node.left.data
+    if node.left is not None:
+        final_sum += node.left.data
 
-  if node.right is not None:
-    finalSum += node.right.data
+    if node.right is not None:
+        final_sum += node.right.data
 
-  node.data = finalSum
+    node.data = final_sum
 
 def insert(node, lvalue, rvalue):
-  if lvalue != None:
-    node.left = Node(lvalue)
-  if rvalue != None:
-    node.right = Node(rvalue)
+    if lvalue != None:
+        node.left = Node(lvalue)
+    if rvalue != None:
+        node.right = Node(rvalue)
 
-def inOrder(node):
-  if node == None:
-    return
-  inOrder(node.left)
-  print('%d ' % node.data, end = '')
-  inOrder(node.right)
+def in_order(node):
+    if node == None:
+        return
+    in_order(node.left)
+    print('%d ' % node.data, end = '')
+    in_order(node.right)
 
 
 root = Node(2)
@@ -42,11 +42,11 @@ insert(root.right, None, 2)
 insert(root.left.right, 3, None)
 
 print('만들어진 트리를 중위 순회 탐색으로 출력 : ', end='')
-inOrder(root)
+in_order(root)
 print()
 
-addChildSum(root)
+add_child_sum(root)
 
 print('하위 노드의 합으로 갱신된 트리를 중위 순회 탐색으로 출력 : ', end='')
-inOrder(root)
+in_order(root)
 print()
